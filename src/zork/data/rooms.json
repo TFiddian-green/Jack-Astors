@@ -81,6 +81,86 @@
           "adjacentRoom": "JA1Kitchen"
         }
       ]
+    },
+    {
+      "id": "JA1FRONT",
+      "name": "Front",
+      "description": "You are outside Jack Astors 1 standing on the sidewalk outside the door.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1Diner"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "JA1ParkingA"
+        }
+        
+      ]
+    },
+    {
+      "id": "JA1ParkingA",
+      "name": "Parking lot A",
+      "description": "You are standing in the northwest section of the parking lot at Jack Astors A",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "JA1ParkingB"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1Front"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "JA1ParkingC"
+        }
+      ]
+    },
+    {
+      "id": "JA1ParkingB",
+      "name": "Parking lot B",
+      "description": "You are standing in the Southwest sector of the Jack astors 1 parking lot",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "JA1ParkingA"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "JA1ParkingD"
+        }
+      ]
+    },
+    {
+      "id": "JA1ParkingC",
+      "name": "Parking lot C",
+      "description": "You are standing in parking lot C at Jack Astors 1",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "JA1ParkingD"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1ParkingA"
+        },
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Road"
+        }
+      ]
     }
+
   ]
 }
