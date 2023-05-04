@@ -86,8 +86,8 @@ public class Game {
    */
   private void printWelcome() {
     System.out.println();
-    System.out.println("Welcome to Zork!");
-    System.out.println("Zork is a new, incredibly boring adventure game.");
+    System.out.println("Welcome to Jack-Astors!");
+    System.out.println("This is a new, incredibly adventure game.");
     System.out.println("Type 'help' if you need help.");
     System.out.println();
     System.out.println(currentRoom.longDescription());
