@@ -19,54 +19,66 @@
       ]
     },
     {
-      "id": "Bedroom",
-      "name": "Bedroom",
-      "description": "You are in a large bedroom",
+      "id": "JA1Bathroom",
+      "name": "Bathroom",
+      "description": "You are in a musty bathroom in Jack Astors 1",
       "exits": [
         {
           "isLocked": false,
           "direction": "South",
-          "adjacentRoom": "Hallway"
-        },
-        {
-          "isLocked": false,
-          "direction": "SouthEast",
-          "adjacentRoom": "Bathroom"
-        },
+          "adjacentRoom": "JA1Diner"
+        }
+      ]
+    },
+    {
+      "id": "JA1Diner",
+      "name": "Diner",
+      "description": "You are in an empty diner in Jack Astors 1",
+      "exits": [
         {
           "isLocked": false,
           "direction": "East",
-          "adjacentRoom": "Closet"
-        }
-      ]
-    },
-    {
-      "id": "Bathroom",
-      "name": "Bathroom",
-      "description": "You are in a blue bathroom",
-      "exits": [
-        {
-          "isLocked": true,
-          "direction": "West",
-          "adjacentRoom": "Hallway",
-          "keyId": "1234"
+          "adjacentRoom": "JA1Bar"
         },
         {
           "isLocked": false,
-          "direction": "NorthWest",
-          "adjacentRoom": "Bedroom"
+          "direction": "North",
+          "adjacentRoom": "JA1Bathroom"
         }
+        
       ]
     },
     {
-      "id": "Closet",
-      "name": "Closet",
-      "description": "You are in the closet. It is dark.",
+      "id": "JA1Bar",
+      "name": "Bar",
+      "description": "You are in a Bar, the bartender is playing bloons td6 on their computer",
       "exits": [
         {
           "isLocked": false,
           "direction": "West",
-          "adjacentRoom": "Bedroom"
+          "adjacentRoom": "JA1Diner"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1Kitchen"
+        }
+      ]
+    },
+    {
+      "id": "JA1Kitchen",
+      "name": "Kitchen",
+      "description": "You are in a Bar, the bartender is playing bloons td6 on their computer",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "JA1Diner"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1Kitchen"
         }
       ]
     }
