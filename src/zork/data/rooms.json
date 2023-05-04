@@ -160,7 +160,81 @@
           "adjacentRoom": "Road"
         }
       ]
+    },
+    {
+      "id": "MallParking",
+      "name": "Parking lot Mall",
+      "description": "You are in the parking lot outside the entrance of the Mall",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "HallwayMall"
+        }
+      ]
+    },
+    {
+      "id": "HallwayMall",
+      "name": "Mall Hallway",
+      "description": "You are in the hallway of the mall which has an extremely high ceiling and a long corridor",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "JA2"
+        },
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "JA3"
+        }
+      ]
+    },
+    {
+      "id": "JA2",
+      "name": "Jack Astors 2",
+      "description": "You have entered the Jack astors 2, its completely empty aside from Arman who is attempting to eat a 2 foot long hotdog in one bite",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Shooting Range"
+        },
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "HallwayMall"
+        }
+      ]
+    },
+    {
+      "id": "ShootingRange",
+      "name": "Shooting Range",
+      "description": "There is a one lane shooting range that has a single pistol on the counter",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA2"
+        }
+      ]
+    },
+    {
+      "id": "JA3",
+      "name": "Jack Astors 3",
+      "description": "You are now in Jack Astors 3, Jacob is playing nba 2k and losing",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "east",
+          "adjacentRoom": "HallwayMall"
+        },
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "SubwayStation"
+        }
+      ]
     }
-
   ]
 }
