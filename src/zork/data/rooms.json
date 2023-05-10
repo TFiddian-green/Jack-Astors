@@ -19,54 +19,220 @@
       ]
     },
     {
-      "id": "Jack Astors 1",
-      "name": "Jack Astors 1",
-      "description": "You are in a large Bathroom in Jack Astors 1",
+      "id": "JA1Bathroom",
+      "name": "Bathroom",
+      "description": "You are in a musty bathroom in Jack Astors 1",
       "exits": [
         {
           "isLocked": false,
           "direction": "South",
-          "adjacentRoom": "Hallway"
+          "adjacentRoom": "JA1Diner"
+        }
+      ]
+    },
+    {
+      "id": "JA1Diner",
+      "name": "Diner",
+      "description": "You are in an empty diner in Jack Astors 1",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "JA1Bar"
         },
         {
           "isLocked": false,
-          "direction": "SouthEast",
-          "adjacentRoom": "Bathroom"
+          "direction": "North",
+          "adjacentRoom": "JA1Bathroom"
+        }
+        
+      ]
+    },
+    {
+      "id": "JA1Bar",
+      "name": "Bar",
+      "description": "You are in a Bar, the bartender is playing bloons td6 on their computer",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "JA1Diner"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1Kitchen"
+        }
+      ]
+    },
+    {
+      "id": "JA1Kitchen",
+      "name": "Kitchen",
+      "description": "You are in a Bar, the bartender is playing bloons td6 on their computer",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "JA1Diner"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1Kitchen"
+        }
+      ]
+    },
+    {
+      "id": "JA1FRONT",
+      "name": "Front",
+      "description": "You are outside Jack Astors 1 standing on the sidewalk outside the door.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1Diner"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "JA1ParkingA"
+        }
+        
+      ]
+    },
+    {
+      "id": "JA1ParkingA",
+      "name": "Parking lot A",
+      "description": "You are standing in the northwest section of the parking lot at Jack Astors A",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "JA1ParkingB"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1Front"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "JA1ParkingC"
+        }
+      ]
+    },
+    {
+      "id": "JA1ParkingB",
+      "name": "Parking lot B",
+      "description": "You are standing in the Southwest sector of the Jack astors 1 parking lot",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "JA1ParkingA"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "JA1ParkingD"
+        }
+      ]
+    },
+    {
+      "id": "JA1ParkingC",
+      "name": "Parking lot C",
+      "description": "You are standing in parking lot C at Jack Astors 1",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "JA1ParkingD"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1ParkingA"
+        },
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Road"
+        }
+      ]
+    },
+    {
+      "id": "MallParking",
+      "name": "Parking lot Mall",
+      "description": "You are in the parking lot outside the entrance of the Mall",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "HallwayMall"
+        }
+      ]
+    },
+    {
+      "id": "HallwayMall",
+      "name": "Mall Hallway",
+      "description": "You are in the hallway of the mall which has an extremely high ceiling and a long corridor",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "JA2"
         },
         {
           "isLocked": false,
           "direction": "East",
-          "adjacentRoom": "Closet"
+          "adjacentRoom": "JA3"
         }
       ]
     },
     {
-      "id": "Bathroom",
-      "name": "Bathroom",
-      "description": "You are in a blue bathroom",
+      "id": "JA2",
+      "name": "Jack Astors 2",
+      "description": "You have entered the Jack astors 2, its completely empty aside from Arman who is attempting to eat a 2 foot long hotdog in one bite",
       "exits": [
         {
-          "isLocked": true,
-          "direction": "West",
-          "adjacentRoom": "Hallway",
-          "keyId": "1234"
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Shooting Range"
         },
         {
           "isLocked": false,
-          "direction": "NorthWest",
-          "adjacentRoom": "Bedroom"
+          "direction": "East",
+          "adjacentRoom": "HallwayMall"
         }
       ]
     },
     {
-      "id": "Closet",
-      "name": "Closet",
-      "description": "You are in the closet. It is dark.",
+      "id": "ShootingRange",
+      "name": "Shooting Range",
+      "description": "There is a one lane shooting range that has a single pistol on the counter",
       "exits": [
         {
           "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA2"
+        }
+      ]
+    },
+    {
+      "id": "JA3",
+      "name": "Jack Astors 3",
+      "description": "You are now in Jack Astors 3, Jacob is playing nba 2k and losing",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "east",
+          "adjacentRoom": "HallwayMall"
+        },
+        {
+          "isLocked": false,
           "direction": "West",
-          "adjacentRoom": "Bedroom"
+          "adjacentRoom": "SubwayStation"
         }
       ]
     }

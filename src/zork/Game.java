@@ -8,7 +8,7 @@ import java.util.HashMap;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
+// test
 public class Game {
 
   public static HashMap<String, Room> roomMap = new HashMap<String, Room>();
@@ -22,7 +22,7 @@ public class Game {
   public Game() {
     try {
       initRooms("src\\zork\\data\\rooms.json");
-      currentRoom = roomMap.get("Bedroom");
+      currentRoom = roomMap.get("JA1Bar");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -86,8 +86,8 @@ public class Game {
    */
   private void printWelcome() {
     System.out.println();
-    System.out.println("Welcome to Zork!");
-    System.out.println("Zork is a new, incredibly boring adventure game.");
+    System.out.println("Welcome to Jack-Astors!");
+    System.out.println("This is a new, incredibly adventure game.");
     System.out.println("Type 'help' if you need help.");
     System.out.println();
     System.out.println(currentRoom.longDescription());
