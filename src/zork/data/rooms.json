@@ -193,7 +193,7 @@
     {
       "id": "JA2",
       "name": "Jack Astors 2",
-      "description": "You have entered the Jack astors 2, its completely empty aside from Arman who is attempting to eat a 2 foot long hotdog in one bite",
+      "description": "You have entered the Jack astors 2, its completely empty aside from Arman who is eating a hotdog in at the corner table",
       "exits": [
         {
           "isLocked": false,
@@ -222,7 +222,7 @@
     {
       "id": "JA3",
       "name": "Jack Astors 3",
-      "description": "You are now in Jack Astors 3, Jacob is playing nba 2k and losing",
+      "description": "You are now in Jack Astors 3, Jacob is playing nba 2k",
       "exits": [
         {
           "isLocked": false,
