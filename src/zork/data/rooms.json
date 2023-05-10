@@ -51,7 +51,7 @@
     {
       "id": "JA1Bar",
       "name": "Bar",
-      "description": "You are in a Bar, the bartender is playing bloons td6 on their computer",
+      "description": "You are in a Bar, the bartender is playing bloons TD 6 on their computer",
       "exits": [
         {
           "isLocked": false,
