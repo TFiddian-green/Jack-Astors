@@ -235,6 +235,18 @@
           "adjacentRoom": "SubwayStation"
         }
       ]
+    },
+    {
+      "id": "Subway",
+      "name": "Subway Station",
+      "description": "You are in a old musty subway station with a train at the station",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "west",
+          "adjacentRoom": "JA3"
+        }
+      ]
     }
   ]
 }
