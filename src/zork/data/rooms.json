@@ -19,9 +19,9 @@
       ]
     },
     {
-      "id": "Bedroom",
-      "name": "Bedroom",
-      "description": "You are in a large bedroom",
+      "id": "Jack Astors 1",
+      "name": "Jack Astors 1",
+      "description": "You are in a large Bathroom in Jack Astors 1",
       "exits": [
         {
           "isLocked": false,
