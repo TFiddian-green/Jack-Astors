@@ -108,13 +108,20 @@ public class Game {
       printHelp();
     else if (commandWord.equals("go"))
       goRoom(command);
-    else if (commandWord.equals("quit")) {
+    else if (commandWord.equals("quit")) 
+    {
       if (command.hasSecondWord())
         System.out.println("Quit what?");
       else
         return true; // signal that we want to quit
-    } else if (commandWord.equals("eat")) {
+    } 
+    else if (commandWord.equals("eat")) 
+    {
       System.out.println("Do you really think you should be eating at a time like this?");
+    } 
+    else if (commandWord.equals("jump"))
+    {
+      System.out.println("You are jumping.");
     }
     return false;
   }
