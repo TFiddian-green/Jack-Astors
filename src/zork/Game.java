@@ -15,13 +15,19 @@ public class Game {
 
   private Parser parser;
   private Room currentRoom;
+  private Inventory playerInventory;
+
+
 
   /**
    * Create the game and initialise its internal map.
    */
   public Game() {
     try {
+      playerInventory = new Inventory(100);
+      //loads the rooms from room.json
       initRooms("src\\zork\\data\\rooms.json");
+      initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("JA1Bar");
     } catch (Exception e) {
       e.printStackTrace();
