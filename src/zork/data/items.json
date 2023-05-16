@@ -1,0 +1,37 @@
+{"items": [
+    {
+      "id": "gun",
+      "name": "gun",
+      "description": "rusty",
+      "loacation": "ShootingRange"
+      },
+      {
+      "id": "Dog",
+      "name": "Luna",
+      "description": "beautiful dog",
+      "loacation": "RBathroom"
+
+      },
+      {
+        "id": "key",
+      "name": "key",
+      "description": "shiny key",
+      "loacation": "RBathroom" 
+      }
+      
+        
+      
+     
+
+
+
+    ]
+      }
+      
+
+    
+
+
+
+
+   

@@ -87,7 +87,7 @@ public class Game {
   private void printWelcome() {
     System.out.println();
     System.out.println("Welcome to Jack-Astors!");
-    System.out.println("This is a new, incredibly adventure game.");
+    System.out.println("This is a new, incredible adventure game.");
     System.out.println("Type 'help' if you need help.");
     System.out.println();
     System.out.println(currentRoom.longDescription());
@@ -133,8 +133,7 @@ public class Game {
    * and a list of the command words.
    */
   private void printHelp() {
-    System.out.println("You are lost. You are alone. You wander");
-    System.out.println("around at Monash Uni, Peninsula Campus.");
+    System.out.println("You are starting the game.");
     System.out.println();
     System.out.println("Your command words are:");
     parser.showCommands();
