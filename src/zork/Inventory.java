@@ -30,4 +30,17 @@ public class Inventory {
     }
   }
 
+  // remove item
+  public boolean removeItem(Item item){
+    return items.remove(item);
+  }
+
+  public String toString(){
+    String result = "";
+    for (Item item : items) {
+      result += item.getName() +"\n";
+    }
+
+    return result;
+  }
 }

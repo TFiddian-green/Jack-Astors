@@ -27,12 +27,35 @@ public class Game {
       playerInventory = new Inventory(100);
       //loads the rooms from room.json
       initRooms("src\\zork\\data\\rooms.json");
-      //initItems("src\\zork\\data\\items.json");
+      initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("JA1Bar");
     } catch (Exception e) {
       e.printStackTrace();
     }
     parser = new Parser();
+  }
+
+  private void initItems(String fileName) throws Exception{
+    Path path = Path.of(fileName);
+    String jsonString = Files.readString(path);
+    JSONParser parser = new JSONParser();
+    JSONObject json = (JSONObject) parser.parse(jsonString);
+
+    JSONArray jsonItems = (JSONArray) json.get("items");
+
+    for (Object itemObj : jsonItems) {
+      Item item = new Item();
+      String itemName = (String) ((JSONObject) itemObj).get("name");
+      String itemId = (String) ((JSONObject) itemObj).get("id");
+      String itemDescription = (String) ((JSONObject) itemObj).get("description");
+      String loc = (String) ((JSONObject) itemObj).get("location");
+
+      item.setName(itemName);
+      item.setDescription(itemDescription);
+      item.setId(itemId);
+      Room room = roomMap.get(loc);
+      room.addItem(item);
+    }
   }
 
   private void initRooms(String fileName) throws Exception {
