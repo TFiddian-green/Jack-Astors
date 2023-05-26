@@ -1,22 +1,23 @@
-{"items": [
+{
+  "items": [
     {
       "id": "gun",
       "name": "gun",
       "description": "rusty",
-      "location": "JA1Bathroom"
+      "loacation": "ShootingRange"
       },
       {
       "id": "Dog",
       "name": "Luna",
       "description": "beautiful dog",
-      "location": "JA1Bathroom"
+      "loacation": "RBathroom"
 
       },
       {
         "id": "key",
       "name": "key",
       "description": "shiny key",
-      "location": "JA1Bathroom" 
+      "loacation": "RBathroom" 
       }
       
         
