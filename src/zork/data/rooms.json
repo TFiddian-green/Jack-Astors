@@ -291,6 +291,28 @@
           "adjacentRoom": "JA3"
         }
       ]
+    },
+    {
+      "id": "foresthill",
+      "name": "Forest Hill",
+      "description": "You are standing at the beginning of a long straight road",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "south",
+          "adjacentRoom": "Subway"
+        },
+        {
+          "isLocked": false,
+          "direction": "north",
+          "adjacentRoom": "ryanshousemain"
+        }
+      ]
+    },
+    {
+      "id": "ryanshousemain",
+      "name": "Ryans House",
+      "description": "As you step through the 20ft tall door, the large expansive house eludes you, you try to grasp the spacialness of the house."
     }
   ]
 }
