@@ -7,6 +7,7 @@ public class Room {
   private String roomName;
   private String description;
   private ArrayList<Exit> exits;
+  private Inventory itemsInRoom;
 
   public ArrayList<Exit> getExits() {
     return exits;
@@ -23,6 +24,7 @@ public class Room {
   public Room(String description) {
     this.description = description;
     exits = new ArrayList<Exit>();
+    itemsInRoom = new Inventory(Integer.MAX_VALUE);
   }
 
   public Room() {
