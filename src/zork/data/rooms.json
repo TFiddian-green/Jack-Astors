@@ -312,8 +312,14 @@
     {
       "id": "ryanshousemain",
       "name": "Ryans House",
-      "description": "As you step through the 20ft tall door, the large expansive house eludes you, you try to grasp the spacialness of the house."
-      
+      "description": "As you step through the 20ft tall door, the large expansive house eludes you, you try to grasp the spacialness of the house.",
+      "exits":[
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "foresthill"
+        }
+      ]
     }
   ]
 }
