@@ -7,7 +7,7 @@ public class Room {
   private String roomName;
   private String description;
   private ArrayList<Exit> exits;
-  private Inventory itemsInRoom;
+  private Inventory inventory;
 
   public ArrayList<Exit> getExits() {
     return exits;
@@ -24,17 +24,27 @@ public class Room {
   public Room(String description) {
     this.description = description;
     exits = new ArrayList<Exit>();
-    itemsInRoom = new Inventory(Integer.MAX_VALUE);
+    this.inventory =new Inventory(Integer.MAX_VALUE);
   }
+
+public Inventory getInventory(){
+  return inventory;
+}
 
   public Room() {
     roomName = "DEFAULT ROOM";
     description = "DEFAULT DESCRIPTION";
     exits = new ArrayList<Exit>();
+    this.inventory =new Inventory(Integer.MAX_VALUE);
+
   }
 
   public void addExit(Exit exit) throws Exception {
     exits.add(exit);
+  }
+
+  public void addItem(Item item){
+    inventory.addItem(item);
   }
 
   /**
@@ -51,7 +61,7 @@ public class Room {
    */
   public String longDescription() {
 
-    return "Room: " + roomName + "\n\n" + description + "\n" + exitString();
+    return "Room: " + roomName + "\n\n" + description +  "\n" + inventory + "\n" + exitString();
   }
 
   /**

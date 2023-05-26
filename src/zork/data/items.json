@@ -3,20 +3,20 @@
       "id": "gun",
       "name": "gun",
       "description": "rusty",
-      "loacation": "ShootingRange"
+      "location": "JA1Bathroom"
       },
       {
       "id": "Dog",
       "name": "Luna",
       "description": "beautiful dog",
-      "loacation": "RBathroom"
+      "location": "JA1Bathroom"
 
       },
       {
         "id": "key",
       "name": "key",
       "description": "shiny key",
-      "loacation": "RBathroom" 
+      "location": "JA1Bathroom" 
       }
     ]
       }

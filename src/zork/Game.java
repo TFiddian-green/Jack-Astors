@@ -35,6 +35,29 @@ public class Game {
     parser = new Parser();
   }
 
+  private void initItems(String fileName) throws Exception{
+    Path path = Path.of(fileName);
+    String jsonString = Files.readString(path);
+    JSONParser parser = new JSONParser();
+    JSONObject json = (JSONObject) parser.parse(jsonString);
+
+    JSONArray jsonItems = (JSONArray) json.get("items");
+
+    for (Object itemObj : jsonItems) {
+      Item item = new Item();
+      String itemName = (String) ((JSONObject) itemObj).get("name");
+      String itemId = (String) ((JSONObject) itemObj).get("id");
+      String itemDescription = (String) ((JSONObject) itemObj).get("description");
+      String loc = (String) ((JSONObject) itemObj).get("location");
+
+      item.setName(itemName);
+      item.setDescription(itemDescription);
+      item.setId(itemId);
+      Room room = roomMap.get(loc);
+      room.addItem(item);
+    }
+  }
+
   private void initRooms(String fileName) throws Exception {
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
@@ -120,8 +143,9 @@ public class Game {
         System.out.println("Quit what?");
       else
         return true; // signal that we want to quit
-    } 
-    else if (commandWord.equals("eat")) 
+    } else if (commandWord.equals("take") || commandWord.equals("grab") || commandWord.equals("pickup")){
+      takeItem(command.getSecondWord());
+    }else if (commandWord.equals("eat")) 
     {
       System.out.println("Do you really think you should be eating at a time like this?");
     } 
@@ -133,6 +157,16 @@ public class Game {
   }
 
   // implementations of user commands:
+
+  private void takeItem(String itemName) {
+    Item item = currentRoom.getInventory().removeItem(itemName);
+    if (item != null){
+      playerInventory.addItem(item);
+      System.out.println("You took the " + itemName + ".");
+    }else{
+      System.out.println("I don't see a " + itemName + " here.");
+    }
+  }
 
   /**
    * Print out some help information. Here we print some stupid, cryptic message

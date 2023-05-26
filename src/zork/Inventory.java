@@ -30,4 +30,23 @@ public class Inventory {
     }
   }
 
+  // remove item
+  public Item removeItem(String itemName){
+
+    for (int i = 0; i < items.size(); i++) {
+      if (items.get(i).getName().equals(itemName))
+        return items.remove(i);
+    }
+
+    return null;
+  }
+
+  public String toString(){
+    String result = "";
+    for (Item item : items) {
+      result += item.getName() +"\n";
+    }
+
+    return result;
+  }
 }

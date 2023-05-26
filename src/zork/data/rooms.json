@@ -27,6 +27,11 @@
           "isLocked": false,
           "direction": "South",
           "adjacentRoom": "JA1Diner"
+        },
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "JA1Kitchen"
         }
       ]
     },
@@ -44,6 +49,11 @@
           "isLocked": false,
           "direction": "North",
           "adjacentRoom": "JA1Bathroom"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "JA1Front"
         }
         
       ]
@@ -73,17 +83,17 @@
         {
           "isLocked": false,
           "direction": "West",
-          "adjacentRoom": "JA1Diner"
+          "adjacentRoom": "JA1Bathroom"
         },
         {
           "isLocked": false,
-          "direction": "North",
-          "adjacentRoom": "JA1Kitchen"
+          "direction": "south",
+          "adjacentRoom": "JA1Bar"
         }
       ]
     },
     {
-      "id": "JA1FRONT",
+      "id": "JA1Front",
       "name": "Front",
       "description": "You are outside Jack Astors 1 standing on the sidewalk outside the door.",
       "exits": [
@@ -129,8 +139,8 @@
       "exits": [
         {
           "isLocked": false,
-          "direction": "East",
-          "adjacentRoom": "JA1ParkingA"
+          "direction": "West",
+          "adjacentRoom": "JA1ParkingA "
         },
         {
           "isLocked": false,
@@ -158,6 +168,40 @@
           "isLocked": false,
           "direction": "West",
           "adjacentRoom": "Road"
+        }
+      ]
+    },
+    {
+      "id": "JA1ParkingD",
+      "name": "Parking lot D",
+      "description": "You are standing in parking lot D at Jack Astors 1",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "JA1ParkingB"
+        },
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "JA1ParkingC"
+        }
+      ]
+    },
+    {
+      "id": "Road",
+      "name": "Road",
+      "description": "A long road on the way to the mall",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "east",
+          "adjacentRoom": "JA1ParkingC"
+        },
+        {
+          "isLocked": false,
+          "direction": "south",
+          "adjacentRoom": "MallParking"
         }
       ]
     },
@@ -198,7 +242,7 @@
         {
           "isLocked": false,
           "direction": "South",
-          "adjacentRoom": "Shooting Range"
+          "adjacentRoom": "ShootingRange"
         },
         {
           "isLocked": false,
@@ -226,13 +270,13 @@
       "exits": [
         {
           "isLocked": false,
-          "direction": "east",
+          "direction": "West",
           "adjacentRoom": "HallwayMall"
         },
         {
           "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "SubwayStation"
+          "direction": "east",
+          "adjacentRoom": "Subway"
         }
       ]
     },
@@ -243,7 +287,7 @@
       "exits": [
         {
           "isLocked": false,
-          "direction": "west",
+          "direction": "West",
           "adjacentRoom": "JA3"
         }
       ]
