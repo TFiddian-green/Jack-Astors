@@ -143,11 +143,15 @@ public class Game {
         System.out.println("Quit what?");
       else
         return true; // signal that we want to quit
-    } 
-    else if (commandWord.equals("eat")) 
+    } else if (commandWord.equals("take") || commandWord.equals("grab") || commandWord.equals("pickup")){
+      takeItem(command.getSecondWord());
+    }else if (commandWord.equals("eat")) 
     {
       System.out.println("Do you really think you should be eating at a time like this?");
-    } 
+    } else if(commandWord.equals("Inventory"))
+    {
+      System.out.println(playerInventory);
+    }
     else if (commandWord.equals("jump"))
     {
       System.out.println("You are jumping.");
@@ -156,6 +160,17 @@ public class Game {
   }
 
   // implementations of user commands:
+
+  private void takeItem(String itemName) {
+    Item item = currentRoom.getInventory().removeItem(itemName);
+    if (item != null){
+      playerInventory.addItem(item);
+      System.out.println("You took the " + itemName + ".");
+    }else{
+      System.out.println("I don't see a " + itemName + " here.");
+    }
+  }
+  
 
   /**
    * Print out some help information. Here we print some stupid, cryptic message

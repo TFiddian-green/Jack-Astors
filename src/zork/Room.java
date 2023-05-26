@@ -27,6 +27,10 @@ public class Room {
     this.inventory =new Inventory(Integer.MAX_VALUE);
   }
 
+public Inventory getInventory(){
+  return inventory;
+}
+
   public Room() {
     roomName = "DEFAULT ROOM";
     description = "DEFAULT DESCRIPTION";

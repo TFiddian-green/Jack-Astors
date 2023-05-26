@@ -31,8 +31,14 @@ public class Inventory {
   }
 
   // remove item
-  public boolean removeItem(Item item){
-    return items.remove(item);
+  public Item removeItem(String itemName){
+
+    for (int i = 0; i < items.size(); i++) {
+      if (items.get(i).getName().equals(itemName))
+        return items.remove(i);
+    }
+
+    return null;
   }
 
   public String toString(){
