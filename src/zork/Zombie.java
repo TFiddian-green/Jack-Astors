@@ -5,7 +5,8 @@ public class Zombie {
     private int attackDamage;
     private boolean isAlive;
 
-    public Zombie100;
+    public void Zombie()
+    {
         isAlive = true;
     }
 
