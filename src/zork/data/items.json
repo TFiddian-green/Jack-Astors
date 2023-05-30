@@ -1,26 +1,32 @@
-{"items": [
+{
+  "items": [
     {
-      "id": "gun",
-      "name": "gun",
+      "id": "ak47",
+      "name": "Battle-Scarred AK47",
       "description": "rusty",
-      "location": "JA1Bathroom"
+      "loacation": "ShootingRange"
       },
       {
       "id": "Dog",
       "name": "Luna",
       "description": "beautiful dog",
-      "location": "JA1Bathroom"
+      "location": "RBathroom"
 
-      },
-      {
-        "id": "key",
-      "name": "key",
+    },
+    {
+      "id": "key",
+      "name": "Key",
       "description": "shiny key",
-      "location": "JA3" 
-      }
-      
-    ]
-      }
+      "location": "RBathroom" 
+    },
+    {
+      "id": "StoreKey",
+      "name": "GunShopKey",
+      "description": "old rusty gold key",
+      "location": "JA2"
+    }
+  ]
+}
       
 
     

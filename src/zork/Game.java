@@ -145,10 +145,17 @@ public class Game {
         return true; // signal that we want to quit
     } else if (commandWord.equals("take") || commandWord.equals("grab") || commandWord.equals("pickup")){
       takeItem(command.getSecondWord());
-    }else if (commandWord.equals("eat")) 
+    } else if(commandWord.equals("drop") || commandWord.equals("remove") || commandWord.equals("throw"))
+    {
+      dropItem(command.getSecondWord());
+    }
+    else if (commandWord.equals("eat")) 
     {
       System.out.println("Do you really think you should be eating at a time like this?");
-    } 
+    } else if(commandWord.equals("inventory"))
+    {
+      System.out.println(playerInventory);
+    }
     else if (commandWord.equals("jump"))
     {
       System.out.println("You are jumping.");
@@ -166,6 +173,21 @@ public class Game {
     }else{
       System.out.println("I don't see a " + itemName + " here.");
     }
+  }
+  private void dropItem(String itemName)
+  {
+    
+    Item item = playerInventory.removeItem(itemName);
+    if(item !=null){
+    currentRoom.getInventory().addItem(item); 
+    System.out.println("you have dropped the " + itemName + " here.");
+    }
+    else{
+      System.out.println("there is no " + itemName + " to drop");
+    }
+
+
+   
   }
 
   /**

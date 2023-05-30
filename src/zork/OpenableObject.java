@@ -35,6 +35,10 @@ public class OpenableObject {
     return keyId;
   }
 
+  public void setKeyId(String keyId) {
+    this.keyId = keyId;
+  }
+
   public boolean isOpen() {
     return isOpen;
   }

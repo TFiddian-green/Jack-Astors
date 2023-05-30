@@ -1,12 +1,9 @@
 package zork;
 
-/**
- * Exit
- */
 public class Exit extends OpenableObject {
   private String direction;
   private String adjacentRoom;
-  // Michael test
+
   public Exit(String direction, String adjacentRoom, boolean isLocked, String keyId) {
     super(isLocked, keyId);
     this.direction = direction;
@@ -39,5 +36,4 @@ public class Exit extends OpenableObject {
   public void setAdjacentRoom(String adjacentRoom) {
     this.adjacentRoom = adjacentRoom;
   }
-
 }
