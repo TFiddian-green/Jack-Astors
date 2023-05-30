@@ -301,7 +301,25 @@
           "isLocked": false,
           "direction": "South",
           "adjacentRoom": "foresthill"
+        },
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "RBathroom"
         }
+      ]
+    },
+    {
+      "id": "RBathroom",
+      "name": "Ryan's Bathroom",
+      "description": "You are standing in Ryan's cool bathroom ",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "ryanshousemain"
+        }
+        
       ]
     }
   ]
