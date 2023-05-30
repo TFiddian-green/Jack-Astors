@@ -8,6 +8,7 @@ public class Room {
   private String description;
   private ArrayList<Exit> exits;
   private Inventory inventory;
+  private Zombie zombie;
 
   public ArrayList<Exit> getExits() {
     return exits;
@@ -122,5 +123,9 @@ public Inventory getInventory(){
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public Zombie getZombie() {
+    return zombie;
   }
 }

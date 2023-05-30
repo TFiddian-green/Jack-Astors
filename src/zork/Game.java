@@ -195,6 +195,16 @@ public class Game {
     if(playerInventory.contains(itemName))
     {
       System.out.println("bang bang");
+      Zombie zombie = currentRoom.getZombie();
+      if (zombie == null){
+        System.out.println("What are you shooting at!");
+      }else if (zombie.isAlive()){
+        // random # to get how much damge to do store it in damage
+        int damage = (int)(Math.random() * 10);
+        zombie.takeDamage(damage);
+      }else{
+        System.out.println("You are shooting a a dead zombie.");
+      }
     }else{
       System.out.println("you don't have a gun");
     }
