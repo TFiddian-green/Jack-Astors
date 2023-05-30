@@ -148,8 +148,10 @@ public class Game {
     } else if(commandWord.equals("drop") || commandWord.equals("remove") || commandWord.equals("throw"))
     {
       dropItem(command.getSecondWord());
+    } else if(commandWord.equals("shoot") || commandWord.equals("fire")){
+      shootGun(command.getSecondWord());
     }
-    else if (commandWord.equals("eat")) 
+    else if(commandWord.equals("eat")) 
     {
       System.out.println("Do you really think you should be eating at a time like this?");
     } else if(commandWord.equals("inventory"))
@@ -188,6 +190,14 @@ public class Game {
 
 
    
+  }
+  private void shootGun(String itemName){
+    if(playerInventory.contains(itemName))
+    {
+      System.out.println("bang bang");
+    }else{
+      System.out.println("you don't have a gun");
+    }
   }
 
   /**
