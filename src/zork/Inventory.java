@@ -21,6 +21,17 @@ public class Inventory {
     return currentWeight;
   }
 
+  public boolean contains(String itemName)
+  {
+    for (Item item : items) {
+      if(item.getName().equals(itemName))
+      {
+        return true;
+      }
+    }
+    return false;
+  }
+
   public boolean addItem(Item item) {
     if (item.getWeight() + currentWeight <= maxWeight)
       return items.add(item);
