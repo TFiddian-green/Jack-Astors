@@ -14,7 +14,7 @@
           "isLocked": true,
           "direction": "East",
           "adjacentRoom": "Bathroom",
-          "keyId": "1234"
+          "keyId": "key"
         }
       ]
     },
@@ -225,7 +225,8 @@
         {
           "isLocked": true,
           "direction": "West",
-          "adjacentRoom": "GunShop"
+          "adjacentRoom": "GunShop",
+          "keyId": "StoreKey"
         },
         {
           "isLocked": false,
@@ -240,16 +241,17 @@
       "description": "You have entered the Gun and Firearm Shop, its fulled with automatic weapons with no one inside",
       "exits": [
         {
-          "isLocked": false,
+          "isLocked": true,
           "direction": "East",
-          "adjacentRoom": "HallwayMall"
+          "adjacentRoom": "HallwayMall",
+          "keyId": "StoreKey"
         }
       ]
     },
     {
       "id": "JA2",
       "name": "Jack Astors 2",
-      "description": "You are now in Jack Astors 2, Jacob is playing nba 2k",
+      "description": "You are now in Jack Astors 2, Jacob is playing nba 2k. He has a shiny gold key tangling out of his pocket.",
       "exits": [
         {
           "isLocked": false,

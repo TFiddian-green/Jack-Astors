@@ -1,10 +1,10 @@
 {
   "items": [
     {
-      "id": "gun",
-      "name": "gun",
+      "id": "ak47",
+      "name": "Battle-Scarred AK47",
       "description": "rusty",
-      "location": "GunShop"
+      "loacation": "ShootingRange"
       },
       {
       "id": "Dog",
@@ -12,15 +12,21 @@
       "description": "beautiful dog",
       "location": "RBathroom"
 
-      },
-      {
-        "id": "key",
-      "name": "key",
+    },
+    {
+      "id": "key",
+      "name": "Key",
       "description": "shiny key",
       "location": "RBathroom" 
-      }
-    ]
-      }
+    },
+    {
+      "id": "StoreKey",
+      "name": "GunShopKey",
+      "description": "old rusty gold key",
+      "location": "JA2"
+    }
+  ]
+}
       
 
     
