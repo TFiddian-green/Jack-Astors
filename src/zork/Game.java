@@ -116,7 +116,7 @@ public class Game {
   private void printWelcome() {
     System.out.println();
     System.out.println("Welcome to Jack-Astors!");
-    System.out.println("This is a new, incredible adventure game.");
+    System.out.println("This is a new, incredible text adventure game.");
     System.out.println("Type 'help' if you need help.");
     System.out.println();
     System.out.println(currentRoom.longDescription());
