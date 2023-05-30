@@ -5,8 +5,8 @@ public class Zombie {
     private int attackDamage;
     private boolean isAlive;
 
-    public void Zombie()
-    {
+    public void Zombie(){
+        health = 100;
         isAlive = true;
     }
 
@@ -19,7 +19,7 @@ public class Zombie {
 
     private void die() {
         isAlive = false;
-        System.out.println("The zombie has been defeated!");
+        System.out.println("The zombie is dead.");
     }
 
     public boolean isAlive() {
