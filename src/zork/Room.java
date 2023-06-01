@@ -10,6 +10,8 @@ public class Room {
   private Inventory inventory;
   private Zombie zombie;
 
+ 
+
   public ArrayList<Exit> getExits() {
     return exits;
   }
@@ -127,5 +129,9 @@ public Inventory getInventory(){
 
   public Zombie getZombie() {
     return zombie;
+  }
+
+  public void setZombie(Zombie zombie){
+    this.zombie = zombie;
   }
 }
