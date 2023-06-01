@@ -117,8 +117,8 @@ public class Game {
    */
   private void printWelcome() {
     System.out.println();
-    System.out.println("█░█░█ █▀▀ █░░ █▀▀ █▀█ █▀▄▀█ █▀▀   ▀█▀ █▀█   ░░█ ▄▀█ █▀▀ █▄▀   ▄▀█ █▀ ▀█▀ █▀█ █▀█ █▀ █");
-    System.out.println("▀▄▀▄▀ ██▄ █▄▄ █▄▄ █▄█ █░▀░█ ██▄   ░█░ █▄█   █▄█ █▀█ █▄▄ █░█   █▀█ ▄█ ░█░ █▄█ █▀▄ ▄█ ▄");
+    System.out.println("█ █ █ █▀▀ █   █▀▀ █▀█ █▀▄▀█ █▀▀   ▀█▀ █▀█     █ ▄▀█ █▀▀ █▄▀   ▄▀█ █▀ ▀█▀ █▀█ █▀█ █▀ █");
+    System.out.println("▀▄▀▄▀ ██▄ █▄▄ █▄▄ █▄█ █ ▀ █ ██▄    █  █▄█   █▄█ █▀█ █▄▄ █ █   █▀█ ▄█  █  █▄█ █▀▄ ▄█ ▄");
     System.out.println("");
     System.out.println("This is a new and incredible text adventure game.");
     System.out.println("Type 'help' if you need help.");
