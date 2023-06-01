@@ -2,10 +2,10 @@ package zork;
 
 public class Zombie {
     private int health;
-    private int attackDamage;
     private boolean isAlive;
+    private Room JA1Diner;
 
-    public void Zombie(){
+    public Zombie(){
         health = 100;
         isAlive = true;
     }
@@ -25,4 +25,6 @@ public class Zombie {
     public boolean isAlive() {
         return isAlive;
     }
+
+    
 }

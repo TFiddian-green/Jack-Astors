@@ -4,7 +4,7 @@
       "id": "ak47",
       "name": "Battle-Scarred AK47",
       "description": "rusty",
-      "loacation": "ShootingRange"
+      "location": "GunShop"
       },
       {
       "id": "Dog",
@@ -25,5 +25,6 @@
       "description": "old rusty gold key",
       "location": "JA2"
     }
+
   ]
 }
