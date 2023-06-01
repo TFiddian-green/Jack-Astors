@@ -150,7 +150,7 @@ public class Game {
     } else if(commandWord.equals("drop") || commandWord.equals("remove") || commandWord.equals("throw"))
     {
       dropItem(command.getSecondWord());
-    } else if(commandWord.equals("shoot") || commandWord.equals("fire")){
+    } else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie")){
       shootGun(command.getSecondWord());
     }
     else if(commandWord.equals("eat")) 
@@ -202,7 +202,7 @@ public class Game {
         System.out.println("What are you shooting at!");
       }else if (zombie.isAlive()){
         // random # to get how much damge to do store it in damage
-        int damage = (int)(Math.random() * 10);
+        int damage = (int)(Math.random() * 60);
         zombie.takeDamage(damage);
       }else{
         System.out.println("You are shooting a a dead zombie.");
