@@ -72,7 +72,7 @@ public Inventory getInventory(){
    * ".
    */
   private String exitString() {
-    String returnString = "Exits: ";
+    String returnString = "(Type go along with the direction to exit the room) Exits: ";
     for (Exit exit : exits) {
       returnString += exit.getDirection() + " ";
     }

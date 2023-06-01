@@ -130,8 +130,11 @@ public class Game {
    */
   private void printWelcome() {
     System.out.println();
-    System.out.println("Welcome to Jack-Astors!");
-    System.out.println("This is a new, incredible text adventure game.");
+    System.out.println("█ █ █ █▀▀ █   █▀▀ █▀█ █▀▄▀█ █▀▀   ▀█▀ █▀█     █ ▄▀█ █▀▀ █▄▀   ▄▀█ █▀ ▀█▀ █▀█ █▀█ █▀ █");
+    System.out.println("▀▄▀▄▀ ██▄ █▄▄ █▄▄ █▄█ █ ▀ █ ██▄    █  █▄█   █▄█ █▀█ █▄▄ █ █   █▀█ ▄█  █  █▄█ █▀▄ ▄█ ▄");
+    System.out.println("");
+    System.out.println("This is a new and incredible text adventure game.");
+    System.out.println("");
     System.out.println("Type 'help' if you need help.");
     System.out.println();
     System.out.println(currentRoom.longDescription());
@@ -163,7 +166,7 @@ public class Game {
     } else if(commandWord.equals("drop") || commandWord.equals("remove") || commandWord.equals("throw"))
     {
       dropItem(command.getSecondWord());
-    } else if(commandWord.equals("shoot") || commandWord.equals("fire")){
+    } else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie")){
       shootGun(command.getSecondWord());
     }
     else if(commandWord.equals("eat")) 
@@ -215,7 +218,7 @@ public class Game {
         System.out.println("What are you shooting at!");
       }else if (zombie.isAlive()){
         // random # to get how much damge to do store it in damage
-        int damage = (int)(Math.random() * 10);
+        int damage = (int)(Math.random() * 60);
         zombie.takeDamage(damage);
       }else{
         System.out.println("You are shooting a a dead zombie.");
