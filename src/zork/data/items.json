@@ -1,8 +1,8 @@
 {
   "items": [
     {
-      "id": "ak",
-      "name": "Battle-Scarred AK47",
+      "id": "gun",
+      "name": "gun",
       "description": "rusty",
       "location": "GunShop"
       },
@@ -20,7 +20,7 @@
       "location": "RBathroom" 
     },
     {
-      "id": "StoreKey",
+      "id": "key",
       "name": "GunShopKey",
       "description": "old rusty gold key",
       "location": "JA2"

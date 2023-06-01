@@ -31,6 +31,19 @@ public class Game {
       initRooms("src\\zork\\data\\rooms.json");
       initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("JA1Bar");
+      roomMap.get("Subway").setZombie(new Zombie("Kevin_Durant", roomMap.get("Subway")));
+      roomMap.get("ryanshousemain").setZombie(new Zombie("Messi", roomMap.get("ryanshousemain")));
+      roomMap.get("Subway").setZombie(new Zombie("Scottie_Barnes", roomMap.get("Subway")));
+      roomMap.get("ryanshousemain").setZombie(new Zombie("Ronaldo", roomMap.get("ryanshousemain")));
+
+      /*
+       * Zombie Kevin_Durant = new Zombie();
+    Room Subway = new Room("You are in a old musty subway station with a train at the station, there is a zombified version of Kevin durant sitting on the bench dribbling a basketball underneath his legs, he turns and looks at you, now he is approaching you");
+    Subway.setZombie(Kevin_Durant);
+    Zombie Scottie_Barnes = new Zombie();
+    Zombie Messi = new Zombie();
+    Zombie Ronaldo = new Zombie();
+       */
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -117,8 +130,11 @@ public class Game {
    */
   private void printWelcome() {
     System.out.println();
-    System.out.println("Welcome to Jack-Astors!");
-    System.out.println("This is a new, incredible text adventure game.");
+    System.out.println("█ █ █ █▀▀ █   █▀▀ █▀█ █▀▄▀█ █▀▀   ▀█▀ █▀█     █ ▄▀█ █▀▀ █▄▀   ▄▀█ █▀ ▀█▀ █▀█ █▀█ █▀ █");
+    System.out.println("▀▄▀▄▀ ██▄ █▄▄ █▄▄ █▄█ █ ▀ █ ██▄    █  █▄█   █▄█ █▀█ █▄▄ █ █   █▀█ ▄█  █  █▄█ █▀▄ ▄█ ▄");
+    System.out.println("");
+    System.out.println("This is a new and incredible text adventure game.");
+    System.out.println("");
     System.out.println("Type 'help' if you need help.");
     System.out.println();
     System.out.println(currentRoom.longDescription());
@@ -150,7 +166,7 @@ public class Game {
     } else if(commandWord.equals("drop") || commandWord.equals("remove") || commandWord.equals("throw"))
     {
       dropItem(command.getSecondWord());
-    } else if(commandWord.equals("shoot") || commandWord.equals("fire")){
+    } else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie")){
       shootGun(command.getSecondWord());
     }
     else if(commandWord.equals("eat")) 
@@ -202,7 +218,7 @@ public class Game {
         System.out.println("What are you shooting at!");
       }else if (zombie.isAlive()){
         // random # to get how much damge to do store it in damage
-        int damage = (int)(Math.random() * 10);
+        int damage = (int)(Math.random() * 60);
         zombie.takeDamage(damage);
       }else{
         System.out.println("You are shooting a a dead zombie.");

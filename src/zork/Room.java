@@ -10,6 +10,8 @@ public class Room {
   private Inventory inventory;
   private Zombie zombie;
 
+ 
+
   public ArrayList<Exit> getExits() {
     return exits;
   }
@@ -70,7 +72,7 @@ public Inventory getInventory(){
    * ".
    */
   private String exitString() {
-    String returnString = "Exits: ";
+    String returnString = "(Type go along with the direction to exit the room) Exits: ";
     for (Exit exit : exits) {
       returnString += exit.getDirection() + " ";
     }
@@ -134,5 +136,9 @@ public Inventory getInventory(){
 
   public Zombie getZombie() {
     return zombie;
+  }
+
+  public void setZombie(Zombie zombie){
+    this.zombie = zombie;
   }
 }

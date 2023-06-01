@@ -1,24 +1,6 @@
 {
   "rooms": [
     {
-      "id": "Hallway",
-      "name": "Hallway",
-      "description": "You are in a long hallway. There are family pictures on all of the walls.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "North",
-          "adjacentRoom": "Bedroom"
-        },
-        {
-          "isLocked": true,
-          "direction": "East",
-          "adjacentRoom": "Bathroom",
-          "keyId": "key"
-        }
-      ]
-    },
-    {
       "id": "JA1Bathroom",
       "name": "Bathroom",
       "description": "You are in a musty bathroom in Jack Astors 1",
@@ -231,7 +213,7 @@
         {
           "isLocked": false,
           "direction": "East",
-          "adjacentRoom": "JA3"
+          "adjacentRoom": "Subway"
         }
       ]
     },
@@ -249,23 +231,6 @@
       ]
     },
     {
-      "id": "JA2",
-      "name": "Jack Astors 2",
-      "description": "You are now in Jack Astors 2, Jacob is playing nba 2k. He has a shiny gold key tangling out of his pocket.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "HallwayMall"
-        },
-        {
-          "isLocked": false,
-          "direction": "east",
-          "adjacentRoom": "Subway"
-        }
-      ]
-    },
-    {
       "id": "Subway",
       "name": "Subway Station",
       "description": "You are in a old musty subway station with a train at the station",
@@ -274,6 +239,11 @@
           "isLocked": false,
           "direction": "West",
           "adjacentRoom": "JA3"
+        },
+        {
+          "isLocked": false,
+          "direction": "north",
+          "adjacentRoom": "foresthill"
         }
       ]
     },
