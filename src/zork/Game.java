@@ -178,7 +178,7 @@ public class Game {
       System.out.println("Do you really think you should be eating at a time like this?");
     } else if(commandWord.equals("inventory"))
     {
-      System.out.println(playerInventory);
+      System.out.println("Inventory: " + playerInventory);
     }
     else if (commandWord.equals("jump"))
     {
