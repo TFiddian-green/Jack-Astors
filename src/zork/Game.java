@@ -210,7 +210,7 @@ public class Game {
    
   }
   private void shootGun(String itemName){
-    if(playerInventory.contains(itemName))
+    if(playerInventory.contains("gun"))
     {
       System.out.println("bang bang");
       Zombie zombie = currentRoom.getZombie();
@@ -220,7 +220,14 @@ public class Game {
         // random # to get how much damge to do store it in damage
         int damage = (int)(Math.random() * 60);
         zombie.takeDamage(damage);
-      }else{
+       }
+      //else if(playerInventory.contains("knife") && zombie.isAlive())
+      // {
+      //   int damage = (int)(Math.random()*30);
+      //   zombie.takeDamage(damage);
+      // }
+      //DO NOT DELETE THIS COMMENT BECAUSE IT MAKES A KNIFE THAT DOES LESS DAMAGE TO THE ZOMBIE
+      else{
         System.out.println("You are shooting a a dead zombie.");
       }
     }else{
