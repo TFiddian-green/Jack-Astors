@@ -8,7 +8,7 @@ public class Zombie {
     public Zombie(String name, Room room){
         health = 100;
         isAlive = true;
-        String Zombiename = name;
+        // String Zombiename = name;
         if(room.equals("Subway") ){
             System.out.println("Zombified Kevin Durant and Zombified Scottie Barnes are sitting on the subway bench next to you. They look over and make eye contact with you. Now they start approaching you menacingly");
         }
