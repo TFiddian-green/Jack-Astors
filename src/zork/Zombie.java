@@ -3,7 +3,7 @@ package zork;
 public class Zombie {
     private int health;
     private boolean isAlive;
-    // private Room room;
+    private Room room;
 
     public Zombie(String name, Room room){
         health = 100;
