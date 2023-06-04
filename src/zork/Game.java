@@ -168,7 +168,7 @@ public class Game {
       dropItem(command.getSecondWord());
     } else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie") || commandWord.equals("hit zombie") || commandWord.equals("hurt zombie")){
       shootGun(command.getSecondWord());
-    } else(commandWord.equals("stab") || commandWord.equals("cut")){
+    } else if(commandWord.equals("stab") || commandWord.equals("cut")){
       stabKnife(command.getSecondWord());
     }
     
