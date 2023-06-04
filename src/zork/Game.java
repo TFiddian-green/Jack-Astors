@@ -168,7 +168,11 @@ public class Game {
       dropItem(command.getSecondWord());
     } else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie") || commandWord.equals("hit zombie") || commandWord.equals("hurt zombie")){
       shootGun(command.getSecondWord());
+    } else(commandWord.equals("stab") || commandWord.equals("cut")){
+      stabKnife(command.getSecondWord());
     }
+    
+
     else if(commandWord.equals("eat")) 
     {
       System.out.println("Do you really think you should be eating at a time like this?");
@@ -220,20 +224,43 @@ public class Game {
         // random # to get how much damge to do store it in damage
         int damage = (int)(Math.random() * 60);
         zombie.takeDamage(damage);
-       }
-      //else if(playerInventory.contains("knife") && zombie.isAlive())
-      // {
-      //   int damage = (int)(Math.random()*30);
-      //   zombie.takeDamage(damage);
-      // }
-      //DO NOT DELETE THIS COMMENT BECAUSE IT MAKES A KNIFE THAT DOES LESS DAMAGE TO THE ZOMBIE
-      else{
+       }else{
         System.out.println("You are shooting a a dead zombie.");
       }
     }else{
       System.out.println("you don't have a gun");
     }
   }
+  private void stabKnife(String itemName)
+  {
+    if(playerInventory.contains("knife"))
+    {
+      System.out.println("yo wanna run it right now? I'll stab you");
+      Zombie zombie2 = currentRoom.getZombie();
+      if(zombie2 == null)
+      {
+        System.out.println("what are you stabbing?");
+      } else if(zombie2.isAlive())
+      {
+        int damage2 = (int)(Math.random()*30);
+        zombie2.takeDamage(damage2);
+      } else{
+        System.out.println("you're stabbing a dead zombie");
+      }
+    }else{
+        System.out.println("you don't have a knife");
+    }
+      }
+    
+  
+    
+       //else if(playerInventory.contains("knife") && zombie.isAlive())
+      // {
+      //   int damage = (int)(Math.random()*30);
+      //   zombie.takeDamage(damage);
+      // }
+      //DO NOT DELETE THIS COMMENT BECAUSE IT MAKES A KNIFE THAT DOES LESS DAMAGE TO THE ZOMBIE
+  
 
   /**
    * Print out some help information. Here we print some stupid, cryptic message
