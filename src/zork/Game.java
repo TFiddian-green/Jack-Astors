@@ -28,6 +28,7 @@ public class Game {
     try {
       playerInventory = new Inventory(100);
       //loads the rooms from room.json
+      
       initRooms("src\\zork\\data\\rooms.json");
       initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("JA1Bar");
