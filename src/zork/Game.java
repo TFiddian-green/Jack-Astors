@@ -274,6 +274,7 @@ public class Game {
     System.out.println("You are starting the game.");
     System.out.println();
     System.out.println("Your command words are:");
+    System.out.println();
     parser.showCommands();
   }
 
