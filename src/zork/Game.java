@@ -261,6 +261,15 @@ public class Game {
       //   zombie.takeDamage(damage);
       // }
       //DO NOT DELETE THIS COMMENT BECAUSE IT MAKES A KNIFE THAT DOES LESS DAMAGE TO THE ZOMBIE
+
+        // private void spawnPotion (boolean allDead){
+        //   Zombie zombie;
+        //   if (zombie.getHealth()){}
+
+
+        // }
+
+
   
 
   /**
