@@ -167,7 +167,13 @@ public class Game {
       shootGun(command.getSecondWord());
     } else if(commandWord.equals("stab") || commandWord.equals("cut")){
       stabKnife(command.getSecondWord());
+
+    }else if(commandWord.equals("health"))
+    {
+  
+      System.out.println(currentRoom.getZombie().getHealth());
     }
+
     
 
     else if(commandWord.equals("eat")) 
