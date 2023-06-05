@@ -111,7 +111,7 @@ public class Game {
    */
   public void play() {
     printWelcome();
-
+    currentRoom = roomMap.get("Subway");
     boolean finished = false;
     while (!finished) {
       Command command;
