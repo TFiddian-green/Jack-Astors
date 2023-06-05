@@ -174,7 +174,7 @@ public class Game {
       shootGun(command.getSecondWord());
     } else if(commandWord.equals("stab") || commandWord.equals("cut")){
       stabKnife(command.getSecondWord());
-    } else if(commandWord.equals("show health") || commandWord.equals("print health")){
+    } else if(commandWord.equals("health") || commandWord.equals("print health")){
       System.out.println(currentRoom.getZombie().getHealth());
     }
     
