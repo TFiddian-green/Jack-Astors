@@ -28,8 +28,8 @@ public class Game {
     try {
       playerInventory = new Inventory(100);
       //loads the rooms from room.json
-      initItems("src\\zork\\data\\items.json");
       initRooms("src\\zork\\data\\rooms.json");
+      initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("JA1Bar");
       roomMap.get("Subway").setZombie(new Zombie("Kevin_Durant", roomMap.get("Subway")));
       roomMap.get("ryanshousemain").setZombie(new Zombie("Messi", roomMap.get("ryanshousemain")));
