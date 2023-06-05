@@ -25,7 +25,6 @@ public class Zombie {
         }
     }
 
-
     private void die() {
         isAlive = false;
         System.out.println("The zombie is dead.");
@@ -35,6 +34,8 @@ public class Zombie {
         return isAlive;
     }
 
-    
+    public int getHealth() {
+        return health;
+    }
 
 }
