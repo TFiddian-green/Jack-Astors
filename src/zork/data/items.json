@@ -36,6 +36,12 @@
       "name": "poopoo",
       "description": "there's very smelly poop in the washroom",
       "location": "JA1Bathroom"
+    },
+    {
+      "id": "end game potion",
+      "name": "end game potion",
+      "description": "theres a green slimy potion infront of you saying DRINK THIS TO WIN THE GAME",
+      "location": "ryanshousemain"
     }
   ]
 }
