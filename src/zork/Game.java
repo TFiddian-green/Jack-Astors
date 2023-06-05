@@ -167,7 +167,10 @@ public class Game {
     } else if(commandWord.equals("drop") || commandWord.equals("remove") || commandWord.equals("throw"))
     {
       dropItem(command.getSecondWord());
-    } else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie") || commandWord.equals("hit zombie") || commandWord.equals("hurt zombie")){
+     } //else if(commandWord.equals("drink") || commandWord.equals("gobble")){
+
+    // }
+     else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie") || commandWord.equals("hit zombie") || commandWord.equals("hurt zombie")){
       shootGun(command.getSecondWord());
     } else if(commandWord.equals("stab") || commandWord.equals("cut")){
       stabKnife(command.getSecondWord());
