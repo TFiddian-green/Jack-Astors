@@ -4,8 +4,7 @@ public class Item extends OpenableObject {
   private int weight;
   private String name;
   private boolean isOpenable;
-  private String description;
-  private String id;
+  
 
 public Item(){
 
@@ -27,9 +26,9 @@ public Item(){
     return weight;
   }
 
-  public void setDescription(String description){
-    this.description = description;
-  }
+  // public void setDescription(String description){
+  //   this.description = description;
+  // }
 
   public void setWeight(int weight) {
     this.weight = weight;
@@ -51,8 +50,8 @@ public Item(){
     this.isOpenable = isOpenable;
   }
 
-public void setId(String itemId) {
-  this.id = itemId;
-}
+// public void setId(String itemId) {
+//   this.id = itemId;
+// }
 
 }

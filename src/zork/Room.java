@@ -64,7 +64,7 @@ public Inventory getInventory(){
    */
   public String longDescription() {
 
-    return "Room: " + roomName + "\n\n" + description +  "\n" + inventory + "\n" + exitString();
+    return "Room: " + roomName + "\n\n" + description +  "\n" + "Items: " + inventory + "\n" + exitString();
   }
 
   /**
@@ -91,6 +91,13 @@ public Inventory getInventory(){
         if (exit.getDirection().equalsIgnoreCase(direction)) {
           String adjacentRoom = exit.getAdjacentRoom();
 
+          System.out.println(".");
+          System.out.println(" .");
+          System.out.println("  .");
+          System.out.println("   .");
+          System.out.println("    .");
+          System.out.println("     .");
+          System.out.println();
           return Game.roomMap.get(adjacentRoom);
         }
 

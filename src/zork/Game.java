@@ -62,13 +62,13 @@ public class Game {
     for (Object itemObj : jsonItems) {
       Item item = new Item();
       String itemName = (String) ((JSONObject) itemObj).get("name");
-      String itemId = (String) ((JSONObject) itemObj).get("id");
-      String itemDescription = (String) ((JSONObject) itemObj).get("description");
+      // String itemId = (String) ((JSONObject) itemObj).get("id");
+      // String itemDescription = (String) ((JSONObject) itemObj).get("description");
       String loc = (String) ((JSONObject) itemObj).get("location");
 
       item.setName(itemName);
-      item.setDescription(itemDescription);
-      item.setId(itemId);
+      // item.setDescription(itemDescription);
+      // item.setId(itemId);
       Room room = roomMap.get(loc);
       room.addItem(item);
     }
@@ -167,15 +167,19 @@ public class Game {
     } else if(commandWord.equals("drop") || commandWord.equals("remove") || commandWord.equals("throw"))
     {
       dropItem(command.getSecondWord());
-    } else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie")){
+    } else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie") || commandWord.equals("hit zombie") || commandWord.equals("hurt zombie")){
       shootGun(command.getSecondWord());
+    } else if(commandWord.equals("stab") || commandWord.equals("cut")){
+      stabKnife(command.getSecondWord());
     }
+    
+
     else if(commandWord.equals("eat")) 
     {
       System.out.println("Do you really think you should be eating at a time like this?");
     } else if(commandWord.equals("inventory"))
     {
-      System.out.println(playerInventory);
+      System.out.println("Inventory: " + playerInventory);
     }
     else if (commandWord.equals("jump"))
     {
@@ -211,7 +215,7 @@ public class Game {
    
   }
   private void shootGun(String itemName){
-    if(playerInventory.contains(itemName))
+    if(playerInventory.contains("gun"))
     {
       System.out.println("bang bang");
       Zombie zombie = currentRoom.getZombie();
@@ -221,13 +225,43 @@ public class Game {
         // random # to get how much damge to do store it in damage
         int damage = (int)(Math.random() * 60);
         zombie.takeDamage(damage);
-      }else{
+       }else{
         System.out.println("You are shooting a a dead zombie.");
       }
     }else{
       System.out.println("you don't have a gun");
     }
   }
+  private void stabKnife(String itemName)
+  {
+    if(playerInventory.contains("knife"))
+    {
+      System.out.println("yo wanna run it right now? I'll stab you");
+      Zombie zombie2 = currentRoom.getZombie();
+      if(zombie2 == null)
+      {
+        System.out.println("what are you stabbing?");
+      } else if(zombie2.isAlive())
+      {
+        int damage2 = (int)(Math.random()*30);
+        zombie2.takeDamage(damage2);
+      } else{
+        System.out.println("you're stabbing a dead zombie");
+      }
+    }else{
+        System.out.println("you don't have a knife");
+    }
+      }
+    
+  
+    
+       //else if(playerInventory.contains("knife") && zombie.isAlive())
+      // {
+      //   int damage = (int)(Math.random()*30);
+      //   zombie.takeDamage(damage);
+      // }
+      //DO NOT DELETE THIS COMMENT BECAUSE IT MAKES A KNIFE THAT DOES LESS DAMAGE TO THE ZOMBIE
+  
 
   /**
    * Print out some help information. Here we print some stupid, cryptic message

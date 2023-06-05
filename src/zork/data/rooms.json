@@ -60,7 +60,7 @@
     {
       "id": "JA1Kitchen",
       "name": "Kitchen",
-      "description": "You are in a Bar, the bartender is playing bloons td6 on their computer",
+      "description": "You are in the kitchen, rats run pass your feet",
       "exits": [
         {
           "isLocked": false,
@@ -223,7 +223,7 @@
       "description": "You have entered the Gun and Firearm Shop, its fulled with automatic weapons with no one inside",
       "exits": [
         {
-          "isLocked": true,
+          "isLocked": false,
           "direction": "East",
           "adjacentRoom": "HallwayMall",
           "keyId": "StoreKey"

@@ -23,7 +23,19 @@
       "id": "key",
       "name": "GunShopKey",
       "description": "old rusty gold key",
-      "location": "GunShop"
+      "location": "JA1Kitchen"
+    },
+    {
+      "id": "knife",
+      "name": "very sharp kitchen knife",
+      "description": "dirty kitchen knife",
+      "location": "JA1Kitchen"
+    },
+    {
+      "id": "poop",
+      "name": "poopoo",
+      "description": "there's very smelly poop in the washroom",
+      "location": "JA1Bathroom"
     }
   ]
 }
