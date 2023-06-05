@@ -233,12 +233,12 @@
     {
       "id": "Subway",
       "name": "Subway Station",
-      "description": "You are in a old musty subway station with a train at the station",
+      "description": "You are in a old musty subway station with a train at the station. Zombified Scottie barnes is approaching you",
       "exits": [
         {
           "isLocked": false,
           "direction": "West",
-          "adjacentRoom": "JA3"
+          "adjacentRoom": "HallwayMall"
         },
         {
           "isLocked": false,
@@ -267,7 +267,7 @@
     {
       "id": "ryanshousemain",
       "name": "Ryans House",
-      "description": "As you step through the 20ft tall door, the large expansive house eludes you, you try to grasp the spacialness of the house.",
+      "description": "As you step through the 20ft tall door you see zombie ronaldo running towards you.",
       "exits":[
         {
           "isLocked": false,

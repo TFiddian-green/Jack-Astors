@@ -32,20 +32,13 @@ public class Game {
       initRooms("src\\zork\\data\\rooms.json");
       initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("JA1Bar");
+
+      // Creates the four zombies
       roomMap.get("Subway").setZombie(new Zombie("Kevin_Durant", roomMap.get("Subway")));
       roomMap.get("ryanshousemain").setZombie(new Zombie("Messi", roomMap.get("ryanshousemain")));
       roomMap.get("Subway").setZombie(new Zombie("Scottie_Barnes", roomMap.get("Subway")));
       roomMap.get("ryanshousemain").setZombie(new Zombie("Ronaldo", roomMap.get("ryanshousemain")));
-
-      /*
-       * Zombie Kevin_Durant = new Zombie();
-    Room Subway = new Room("You are in a old musty subway station with a train at the station, there is a zombified version of Kevin durant sitting on the bench dribbling a basketball underneath his legs, he turns and looks at you, now he is approaching you");
-    Subway.setZombie(Kevin_Durant);
-    Zombie Scottie_Barnes = new Zombie();
-    Zombie Messi = new Zombie();
-    Zombie Ronaldo = new Zombie();
-       */
-    } catch (Exception e) {
+  } catch (Exception e) {
       e.printStackTrace();
     }
     parser = new Parser();
@@ -174,8 +167,6 @@ public class Game {
       shootGun(command.getSecondWord());
     } else if(commandWord.equals("stab") || commandWord.equals("cut")){
       stabKnife(command.getSecondWord());
-    } else if(commandWord.equals("show health") || commandWord.equals("print health")){
-      System.out.println(currentRoom.getZombie().getHealth());
     }
     
 
