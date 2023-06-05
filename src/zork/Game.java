@@ -61,13 +61,13 @@ public class Game {
     for (Object itemObj : jsonItems) {
       Item item = new Item();
       String itemName = (String) ((JSONObject) itemObj).get("name");
-      String itemId = (String) ((JSONObject) itemObj).get("id");
-      String itemDescription = (String) ((JSONObject) itemObj).get("description");
+      // String itemId = (String) ((JSONObject) itemObj).get("id");
+      // String itemDescription = (String) ((JSONObject) itemObj).get("description");
       String loc = (String) ((JSONObject) itemObj).get("location");
 
       item.setName(itemName);
-      item.setDescription(itemDescription);
-      item.setId(itemId);
+      // item.setDescription(itemDescription);
+      // item.setId(itemId);
       Room room = roomMap.get(loc);
       room.addItem(item);
     }
