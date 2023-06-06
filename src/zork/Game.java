@@ -265,10 +265,10 @@ public class Game {
       //DO NOT DELETE THIS COMMENT BECAUSE IT MAKES A KNIFE THAT DOES LESS DAMAGE TO THE ZOMBIE
 
         private void spawnPotion(){
-          Zombie zombie = roomMap.get("ryanshousemain");
-          Zombie zombie2;
-          if (zombie.getHealth() == 0){
-
+          Zombie zombie = roomMap.get("ryanshousemain").getZombie();
+          Zombie zombie2 = roomMap.get("Subway").getZombie();
+          if (zombie.getHealth() == 0 && zombie2.getHealth() == 0){
+            System.out.println("All zombies are dead, spawning potion");
           }
 
 
