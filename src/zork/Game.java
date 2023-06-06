@@ -18,9 +18,8 @@ public class Game {
   private Parser parser;
   private Room currentRoom;
   private Inventory playerInventory;
-
-
-
+  private int playerHealth;
+  private boolean isPlaying;
   /**
    * Create the game and initialise its internal map.
    */
@@ -32,7 +31,8 @@ public class Game {
       initRooms("src\\zork\\data\\rooms.json");
       initItems("src\\zork\\data\\items.json");
       currentRoom = roomMap.get("JA1Bar");
-
+      playerHealth = 50;
+      isPlaying = true;
       // Creates the four zombies
       roomMap.get("Subway").setZombie(new Zombie("Kevin_Durant", roomMap.get("Subway")));
       roomMap.get("ryanshousemain").setZombie(new Zombie("Messi", roomMap.get("ryanshousemain")));
@@ -105,12 +105,13 @@ public class Game {
   public void play() {
     printWelcome();
     currentRoom = roomMap.get("Subway");
-    boolean finished = false;
-    while (!finished) {
+    
+    while (isPlaying) {
       Command command;
       try {
         command = parser.getCommand();
-        finished = processCommand(command);
+        processCommand(command);
+        playersDead();
       } catch (IOException e) {
         e.printStackTrace();
       }
@@ -212,10 +213,7 @@ public class Game {
     else{
       System.out.println("there is no " + itemName + " to drop");
     }
-
-
-   
-  }
+}
   private void shootGun(String itemName){
     if(playerInventory.contains("gun"))
     {
@@ -227,11 +225,13 @@ public class Game {
         // random # to get how much damge to do store it in damage
         int damage = (int)(Math.random() * 60);
         zombie.takeDamage(damage);
+        zombieDamage();
        }else{
         System.out.println("You are shooting a a dead zombie.");
       }
     }else{
       System.out.println("you don't have a gun");
+      zombieDamage();
     }
   }
   private void stabKnife(String itemName)
@@ -247,12 +247,40 @@ public class Game {
       {
         int damage2 = (int)(Math.random()*30);
         zombie2.takeDamage(damage2);
+        zombieDamage();
       } else{
         System.out.println("you're stabbing a dead zombie");
       }
     }else{
         System.out.println("you don't have a knife");
+        zombieDamage();
     }
+      }
+      private void zombieDamage()
+      { 
+        try{
+          
+          Zombie zombie3 = currentRoom.getZombie();
+          if(zombie3.isAlive() && zombie3 != null){
+            int damage3 = (int)(Math.random()*10);
+           playerHealth-= damage3;
+           System.out.println("you have " + playerHealth +" health left (:");
+  
+          }
+        }
+        catch(Exception e)
+        {
+          
+        }
+      }
+
+      private void playersDead()
+      {
+        if(playerHealth <= 0)
+        {
+          System.out.println(" you lose...");
+          isPlaying = false;
+        }
       }
     
   
