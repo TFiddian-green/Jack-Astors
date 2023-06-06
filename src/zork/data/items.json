@@ -39,9 +39,14 @@
     },
     {
       "id": "end game potion",
-      "name": "end game potion",
+      "name": "potion",
       "description": "theres a green slimy potion infront of you saying DRINK THIS TO WIN THE GAME",
       "location": "ryanshousemain"
+    },{
+      "id": "end game potion2",
+      "name": "potion",
+      "description": "theres a green slimy potion infront of you saying DRINK THIS TO WIN THE GAME",
+      "location": "Subway"
     }
   ]
 }

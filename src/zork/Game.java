@@ -20,6 +20,7 @@ public class Game {
   private Inventory playerInventory;
   private int playerHealth;
   private boolean isPlaying;
+  private boolean potionSpawned;
   /**
    * Create the game and initialise its internal map.
    */
@@ -112,6 +113,7 @@ public class Game {
         command = parser.getCommand();
         processCommand(command);
         playersDead();
+        spawnPotion();
       } catch (IOException e) {
         e.printStackTrace();
       }
@@ -196,6 +198,16 @@ public class Game {
   private void takeItem(String itemName) {
     Item item = currentRoom.getInventory().removeItem(itemName);
     if (item != null){
+      if(item.getName().equals("potion")){
+        if (potionSpawned){
+          playerInventory.addItem(item);
+          System.out.println("You took the " + itemName + ".");
+          return;
+        } else {
+          System.out.println("You cannot pick this up right now");
+          return;
+        }
+      }
       playerInventory.addItem(item);
       System.out.println("You took the " + itemName + ".");
     }else{
@@ -295,8 +307,9 @@ public class Game {
         private void spawnPotion(){
           Zombie zombie = roomMap.get("ryanshousemain").getZombie();
           Zombie zombie2 = roomMap.get("Subway").getZombie();
-          if (zombie.getHealth() == 0 && zombie2.getHealth() == 0){
+          if (zombie.getHealth() <= 0 && zombie2.getHealth() <= 0){
             System.out.println("All zombies are dead, spawning potion");
+            potionSpawned = true;
           }
 
 
