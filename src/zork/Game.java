@@ -292,9 +292,12 @@ public class Game {
       // }
       //DO NOT DELETE THIS COMMENT BECAUSE IT MAKES A KNIFE THAT DOES LESS DAMAGE TO THE ZOMBIE
 
-        // private void spawnPotion (boolean allDead){
+        // private void spawnPotion(){
         //   Zombie zombie;
-        //   if (zombie.getHealth()){}
+        //   Zombie zombie2;
+        //   if (zombie.getHealth() == 0){
+
+        //   }
 
 
         // }
