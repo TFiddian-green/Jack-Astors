@@ -264,15 +264,15 @@ public class Game {
       // }
       //DO NOT DELETE THIS COMMENT BECAUSE IT MAKES A KNIFE THAT DOES LESS DAMAGE TO THE ZOMBIE
 
-        // private void spawnPotion(){
-        //   Zombie zombie;
-        //   Zombie zombie2;
-        //   if (zombie.getHealth() == 0){
+        private void spawnPotion(){
+          Zombie zombie = roomMap.get("ryanshousemain");
+          Zombie zombie2;
+          if (zombie.getHealth() == 0){
 
-        //   }
+          }
 
 
-        // }
+        }
 
 
   
