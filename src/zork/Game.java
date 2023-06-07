@@ -196,7 +196,7 @@ public class Game {
   // implementations of user commands:
 
   private void takeItem(String itemName) {
-    Item item = currentRoom.getInventory().removeItem(itemName);
+    Item item = currentRoom.getInventory().removeItem(itemName);//removes item from the room
     if (item != null){
       if(item.getName().equals("potion")){
         if (potionSpawned){
@@ -204,11 +204,11 @@ public class Game {
           System.out.println("You took the " + itemName + ".");
           return;
         } else {
-          System.out.println("You cannot pick this up right now");
+          System.out.println("You cannot pick this up right now until you kill the zombie of ronaldo aswell.");
           return;
         }
       }
-      playerInventory.addItem(item);
+      playerInventory.addItem(item);//adds item to the player's inventory
       System.out.println("You took the " + itemName + ".");
     }else{
       System.out.println("I don't see a " + itemName + " here.");
@@ -218,9 +218,9 @@ public class Game {
   private void dropItem(String itemName)
   {
     
-    Item item = playerInventory.removeItem(itemName);
+    Item item = playerInventory.removeItem(itemName);//this removes the item from the player's inventory
     if(item !=null){
-    currentRoom.getInventory().addItem(item); 
+    currentRoom.getInventory().addItem(item); //if there's an item then it takes it from the player and gives it to the room's inventory when you drop the item
     System.out.println("you have dropped the " + itemName + " here.");
     }
     else{
@@ -229,14 +229,14 @@ public class Game {
 }
   private void drinkPotion(String itemName)
   {
-    if(playerInventory.contains("potion"))
+    if(playerInventory.contains("potion"))//checks if the player inventory has a potion and if it does, and you drink it, then you win and the game ends
     {
       System.out.println("You win! Yay!");
-      isPlaying = false;
+      isPlaying = false;//ends the game
     }
   }
   private void shootGun(String itemName){
-    if(playerInventory.contains("gun"))
+    if(playerInventory.contains("gun"))//checks if the player inventory has a gun
     {
       System.out.println("bang bang");
       Zombie zombie = currentRoom.getZombie();
@@ -245,10 +245,10 @@ public class Game {
       }else if (zombie.isAlive()){
         // random # to get how much damge to do store it in damage
         int damage = (int)(Math.random() * 60);
-        zombie.takeDamage(damage);
-        zombieDamage();
+        zombie.takeDamage(damage);//deals damage to the zombie
+        zombieDamage();//calls the zombieDamage method if the conditions are met
        }else{
-        System.out.println("You are shooting a a dead zombie.");
+        System.out.println("You are shooting at a dead zombie.");
       }
     }else{
       System.out.println("you don't have a gun");
