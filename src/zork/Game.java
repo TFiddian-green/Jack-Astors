@@ -163,9 +163,9 @@ public class Game {
     } else if(commandWord.equals("drop") || commandWord.equals("remove") || commandWord.equals("throw"))
     {
       dropItem(command.getSecondWord());
-     } //else if(commandWord.equals("drink") || commandWord.equals("gobble")){
-
-    // }
+     } else if(commandWord.equals("drink") || commandWord.equals("gobble")){
+        drinkPotion(command.getSecondWord());
+     }
      else if(commandWord.equals("shoot") || commandWord.equals("fire") || commandWord.equals("shoot zombie") || commandWord.equals("kill zombie") || commandWord.equals("hit zombie") || commandWord.equals("hurt zombie")){
       shootGun(command.getSecondWord());
     } else if(commandWord.equals("stab") || commandWord.equals("cut")){
@@ -214,6 +214,7 @@ public class Game {
       System.out.println("I don't see a " + itemName + " here.");
     }
   }
+
   private void dropItem(String itemName)
   {
     
@@ -226,6 +227,14 @@ public class Game {
       System.out.println("there is no " + itemName + " to drop");
     }
 }
+  private void drinkPotion(String itemName)
+  {
+    if(playerInventory.contains("potion"))
+    {
+      System.out.println("You win! Yay!");
+      isPlaying = false;
+    }
+  }
   private void shootGun(String itemName){
     if(playerInventory.contains("gun"))
     {
@@ -299,7 +308,7 @@ public class Game {
           Zombie zombie = roomMap.get("ryanshousemain").getZombie();
           Zombie zombie2 = roomMap.get("Subway").getZombie();
           if (zombie.getHealth() <= 0 && zombie2.getHealth() <= 0){
-            System.out.println("All zombies are dead, spawning potion");
+            System.out.println("All zombies are dead, there is a potion now infront of you saying DRINK IF YOU WANT TO GO BACK TO BAYVIEWGLEN");
             potionSpawned = true;
           }
 
