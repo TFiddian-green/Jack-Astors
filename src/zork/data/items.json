@@ -38,6 +38,12 @@
       "location": "JA1Bathroom"
     },
     {
+      "id": "meatloaf",
+      "name": "Leftover Meatloaf",
+      "description": "You see Mr. Deslauriers meatloaf from saturday night",
+      "location": "JA1Kitchen"
+    },
+    {
       "id": "end game potion",
       "name": "potion",
       "description": "theres a green slimy potion infront of you saying DRINK THIS TO WIN THE GAME",
