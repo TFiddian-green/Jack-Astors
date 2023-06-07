@@ -39,9 +39,15 @@
     },
     {
       "id": "meatloaf",
-      "name": "Leftover Meatloaf",
+      "name": "LeftoverMeatloaf",
       "description": "You see Mr. Deslauriers meatloaf from saturday night",
       "location": "JA1Kitchen"
+    },
+    {
+      "id": "extramark",
+      "name": "Extramark",
+      "description": "If you have found this, it means you have to give us an extra mark for our project",
+      "location": "JA1Front"
     },
     {
       "id": "end game potion",
