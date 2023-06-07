@@ -306,6 +306,21 @@ public class Game {
 
         }
 
+        // private void drinkPotion(boolean drankPotion){
+        //   if (){
+        //     drankPotion = true;
+        //   }else{
+        //     drankPotion = false;
+        //   }
+        // }
+
+        // // private void endGame(){
+        // //   if (drankPotion = true){
+        // //     isPlaying = false;
+        // //   }
+
+        // // }
+
 
   
 
