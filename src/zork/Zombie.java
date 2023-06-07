@@ -1,10 +1,13 @@
 package zork;
 
 public class Zombie {
+
+    // zombie attributes
     private int health;
     private boolean isAlive;
     private String name;
 
+    
     public Zombie(String name, Room room) {
         this.name = name;
         health = 100;
